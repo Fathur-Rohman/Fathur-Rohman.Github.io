@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem;
+            background-color: #333;
+            color: #f4f4f9;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        section {
+            margin: 2rem auto;
+            padding: 1rem;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        #about, #contact {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .project-card {
+            background-color: #eee;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, textarea, button {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Nama Anda</h1>
+        <p>Game Designer | Story Writer | Developer</p>
+    </header>
+
+    <!-- Tentang Diri -->
+    <section id="about">
+        <h2>Tentang Saya</h2>
+        <p>Saya adalah seorang game designer dengan pengalaman dalam mengembangkan game dengan fitur narrative dan gameplay menarik. Saya memiliki keahlian dalam Unity, story writing, dan game design.</p>
+    </section>
+
+    <!-- Proyek -->
+    <section id="projects">
+        <h2>Proyek Saya</h2>
+        <div class="project-card">
+            <h3>Project 1</h3>
+            <p>Deskripsi singkat proyek.</p>
+        </div>
+        <div class="project-card">
+            <h3>Project 2</h3>
+            <p>Deskripsi singkat proyek.</p>
+        </div>
+        <div class="project-card">
+            <h3>Project 3</h3>
+            <p>Deskripsi singkat proyek.</p>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact">
+        <h2>Kontak Saya</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Nama" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <textarea id="message" placeholder="Pesan Anda" required></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if(name && email && message) {
+                alert(`Terima kasih, ${name}! Pesan Anda telah dikirim.`);
+                document.getElementById('contactForm').reset();
+            } else {
+                alert('Silakan lengkapi semua kolom.');
+            }
+        });
+    </script>
+</body>
+</html>
