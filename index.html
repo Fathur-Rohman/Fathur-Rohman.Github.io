@@ -3,143 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Saya</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            text-align: center;
-            padding: 2rem;
-            background-color: #333;
-            color: #f4f4f9;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-        }
-
-        section {
-            margin: 2rem auto;
-            padding: 1rem;
-            width: 80%;
-            max-width: 800px;
-        }
-
-        h2 {
-            color: #333;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        #about, #contact {
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 1.5rem;
-        }
-
-        .project-card {
-            background-color: #eee;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        input, textarea, button {
-            margin: 0.5rem 0;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        button {
-            background-color: #333;
-            color: #fff;
-            cursor: pointer;
-            border: none;
-        }
-
-        button:hover {
-            background-color: #555;
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Header -->
     <header>
-        <h1>Nama Anda</h1>
-        <p>Game Designer | Story Writer | Developer</p>
+        <nav>
+            <ul>
+                <li><a href="#about">My Profile</a></li>
+                <li><a href="#projects">My Projects</a></li>
+                <li><a href="#contact">My Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h1>My Portfolio</h1>
+            <p>Game Designer | Story Writer</p>
+        </div>
     </header>
-
-    <!-- Tentang Diri -->
-    <section id="about">
-        <h2>Tentang Saya</h2>
-        <p>Saya adalah seorang game designer dengan pengalaman dalam mengembangkan game dengan fitur narrative dan gameplay menarik. Saya memiliki keahlian dalam Unity, story writing, dan game design.</p>
-    </section>
-
-    <!-- Proyek -->
-    <section id="projects">
-        <h2>Proyek Saya</h2>
-        <div class="project-card">
-            <h3>Project 1</h3>
-            <p>Deskripsi singkat proyek.</p>
-        </div>
-        <div class="project-card">
-            <h3>Project 2</h3>
-            <p>Deskripsi singkat proyek.</p>
-        </div>
-        <div class="project-card">
-            <h3>Project 3</h3>
-            <p>Deskripsi singkat proyek.</p>
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img src="img\poto profil.jpg" alt="Profile Picture" class="profile-pic">
+            <p>
+                Hello, I am Fathur Al Rohman, a student of Politeknik Elektronika Negeri Surabaya who loves playing games. 
+                I also like to design and develop games with a focus on design and writing fun stories.
+            </p>
+            <a href="https://www.canva.com/design/DAGX21B65pU/YSIZiaaTu1IqecCdcje1Bg/edit?utm_content=DAGX21B65pU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Link Sertifikat</a>
         </div>
     </section>
-
-    <!-- Kontak -->
-    <section id="contact">
-        <h2>Kontak Saya</h2>
-        <form id="contactForm">
-            <input type="text" id="name" placeholder="Nama" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <textarea id="message" placeholder="Pesan Anda" required></textarea>
-            <button type="submit">Kirim</button>
-        </form>
+    <section id="projects" class="section">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <!-- Project 1 -->
+            <div class="project" id="project1">
+                <img src="img/Poster (1).png" alt="Everything About Nightmare Thumbnail" class="project-thumbnail" onclick="openPopup('popup1')">
+                <h3>Everything About Nightmare</h3>
+                <p>Everything About Nightmare is a 2.5D horror game. It tells the story of a little girl named Alita who is trapped in a dark house, requiring Alita to get out of the house by passing several puzzles and hiding from monsters.</p>
+                <p>Role: Game Designer and Story Writer</p>
+                <a href="https://okelahiniaja.itch.io/everything-about-nightmare" target="_blank">Link Game</a>
+            </div>
+            <!-- Project 2 -->
+            <div class="project" id="project2">
+                <img src="img/icon game.png" alt="You're The Prey Thumbnail" class="project-thumbnail" onclick="openPopup('popup2')">
+                <h3>You're The Prey</h3>
+                <p>You're the Prey is a horror game for the PC platform. Players will shoot ducks while being watched by a mysterious entity called "the thing." The game is designed to create a disturbing experience with an eerie atmosphere.</p>
+                <p>Role: Story Writer</p>
+                <a href="https://imfeelingood.itch.io/youre-the-prey" target="_blank">Link Game</a>
+            </div>
+            <!-- Project 3 -->
+            <div class="project" id="project3">
+                <img src="img/Wpg homescreen-1 (1).png" alt="Ashes of Polyhymnia Thumbnail" class="project-thumbnail" onclick="openPopup('popup3')">
+                <h3>Ashes of Polyhymnia</h3>
+                <p>Ashes of Polyhymnia is a game about how music affects mental health. It tells the story of a group of musicians trying to bring back the joy of life in a world overtaken by depression and emptiness.</p>
+                <p>Role: Game Designer and Story Writer</p>
+                <a href="https://youtu.be/zIV8BqTHLco?si=ZBGbdhEYiqo51Cpb" target="_blank">Link Trailer</a>
+            </div>
+        </div>
     </section>
-
+    <!-- Popup Modals for Projects -->
+    <div id="popup1" class="popup">
+        <button class="close" onclick="closePopup('popup1')" aria-label="Close popup">&times;</button>
+        <div class="popup-content-wrapper">
+            <img class="popup-content-main" src="img/Ikon.png" alt="Project 1 Main Image">
+            <div class="popup-additional-images">
+                <img src="img/file_2024-11-09_12.17.02.png" alt="Additional Image 1" class="popup-thumbnail">
+                <img src="img/file_2024-11-09_12.18.20.png" alt="Additional Image 2" class="popup-thumbnail">
+                <img src="img/IGDX.jpg" alt="Additional Image 3" class="popup-thumbnail">
+                <img src="img/file_2024-11-09_12.19.49.png" alt="Additional Image 4" class="popup-thumbnail">
+            </div>
+        </div>
+    </div>
+    <div id="popup2" class="popup">
+        <button class="close" onclick="closePopup('popup2')" aria-label="Close popup">&times;</button>
+        <div class="popup-content-wrapper">
+            <img class="popup-content-main" src="img\icon game.png" alt="Project 2 Main Image">
+            <div class="popup-additional-images">
+                <img src="img/Prey.png" alt="Additional Image 1" class="popup-thumbnail">
+                <img src="img/Prey1.png" alt="Additional Image 2" class="popup-thumbnail">
+                <img src="img/prey3.png" alt="Additional Image 3" class="popup-thumbnail">
+            </div>
+        </div>
+    </div>
+    <div id="popup3" class="popup">
+        <button class="close" onclick="closePopup('popup3')" aria-label="Close popup">&times;</button>
+        <div class="popup-content-wrapper">
+            <img class="popup-content-main" src="img/Wpg homescreen-1 (1).png" alt="Project 3 Main Image">
+            <div class="popup-additional-images">
+                <img src="img/file_2024-11-09_13.15.03.png" alt="Additional Image 1" class="popup-thumbnail">
+                <img src="img/file_2024-11-09_13.23.54.png" alt="Additional Image 2" class="popup-thumbnail">
+                <img src="img/WPG 3.png" alt="Additional Image 3" class="popup-thumbnail">
+            </div>
+        </div>
+    </div>
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:fathuralrohman16108@gmail.com">fathuralrohman16108@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/6282287706261">+62822-8770-6261</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/pator.rohman77/" target="_blank">@pator.rohman77</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Fathur Al Rohman. All rights reserved.</p>
+    </footer>
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            if(name && email && message) {
-                alert(`Terima kasih, ${name}! Pesan Anda telah dikirim.`);
-                document.getElementById('contactForm').reset();
-            } else {
-                alert('Silakan lengkapi semua kolom.');
-            }
-        });
+        function openPopup(popupId) {
+            document.getElementById(popupId).style.display = 'block';
+        }
+        function closePopup(popupId) {
+            document.getElementById(popupId).style.display = 'none';
+        }
     </script>
 </body>
 </html>

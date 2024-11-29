@@ -1,0 +1,319 @@
+/* Background Image with Parallax Effect */
+body {
+    background-image: url('img/BG3.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+
+/* Particle styling */
+.particle {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(237, 91, 91, 0.647);
+    clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 
+        68% 57%, 79% 91%, 50% 70%, 
+        21% 91%, 32% 57%, 2% 35%, 
+        39% 35%
+    );
+    pointer-events: none;
+    opacity: 0.8;
+    animation: twinkle 2s ease-out forwards infinite;
+}
+
+/* Twinkle effect for star particles */
+@keyframes twinkle {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+/* Bintang bergerak ke bawah */
+@keyframes fall {
+    0% { transform: translateY(-100vh) scale(0.8); }
+    100% { transform: translateY(100vh) scale(0.8); }
+}
+
+/* Header Styles */
+header {
+    background-color: #00000093;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+.about-container {
+    display: flex;
+    flex-direction: column; /* Change to column to stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px; /* Add margin at the bottom for spacing */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.header-text {
+    margin-top: 20px;
+}
+
+.header-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.header-text p {
+    font-size: 18px;
+}
+
+/* Section Styles */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #00000093;
+    margin: 20px 0;
+}
+
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #f3f7ff;
+}
+
+.section p {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Projects Section */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    background-color: #f4f4f4de;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project p {
+    color: #333;
+}
+
+/* Profile Picture */
+.about-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Project Thumbnails */
+.project-thumbnail {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.project-thumbnail:hover {
+    transform: scale(1.1);
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.429);
+    overflow-y: auto; /* Enable scrolling for content that overflows the popup */
+}
+
+.popup-content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    max-height: 90vh; /* Set a max height to make room for scrolling */
+    overflow-y: auto; /* Enable scrolling within popup */
+}
+
+.popup-main-image {
+    flex: 1;
+    text-align: center;
+}
+
+.popup-content-main {
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.popup-additional-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 2;
+}
+
+.popup-thumbnail {
+    max-width: 750px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #00000093;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive for Tablets and Mobile */
+@media (max-width: 1024px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 90%;
+    }
+
+    .popup-content-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup-content-main {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .popup-additional-images {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .popup-thumbnail {
+        max-width: 45%;
+        margin: 5px;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .profile-pic {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .header-text h1 {
+        font-size: 28px;
+    }
+
+    .header-text p {
+        font-size: 16px;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .popup-content-main {
+        max-width: 90%;
+    }
+
+    .popup-thumbnail {
+        max-width: 100%;
+    }
+}
